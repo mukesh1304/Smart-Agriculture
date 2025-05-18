@@ -6,7 +6,7 @@ A web-based dashboard to monitor and manage key aspects of modern agriculture su
 
 ## 🌐 Live Demo
 
-[Click to View Live (If Deployed)](https://your-deployment-link.com)
+[Click to View Live (If Deployed)](https://smart-agr.netlify.app/)
 
 ---
 
