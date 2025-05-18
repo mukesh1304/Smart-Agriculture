@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pest and Disease Detection</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ Header -->
+        <header class="dashboard-header">
+            <h1>🐛 Pest and Disease Detection</h1>
+            <button class="dashboard-btn" onclick="dashboard()">Dashboard</button>
+        </header>
+
+        <!-- ✅ Upload Image -->
+        <section class="upload-section">
+            <h2>Upload Crop Image:</h2>
+            <form id="uploadForm">
+                <input type="file" id="imageUpload" accept="image/*" required />
+                <button type="submit" class="nav-btn">Detect</button>
+            </form>
+            <div id="imagePreview"></div>
+        </section>
+
+        <!-- ✅ Result Section -->
+        <section class="result-section">
+            <h2>Detection Result:</h2>
+            <div id="resultMessage">In process we will notify you.</div>
+            <div id="suggestions"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

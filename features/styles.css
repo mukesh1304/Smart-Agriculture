@@ -1,0 +1,52 @@
+/* ✅ Feature Section */
+.feature-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.feature-section h2 {
+    color: #4CAF50;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.feature-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.feature-btn:hover {
+    background-color: #388E3C;
+}
+
+.feature-section:hover {
+    transform: translateY(-5px);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .feature-section {
+        padding: 15px;
+    }
+
+    .feature-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

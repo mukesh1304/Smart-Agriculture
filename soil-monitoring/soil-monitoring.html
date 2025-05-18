@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Monitoring</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>🌱 Soil Monitoring Dashboard</h1>
+            <button class="dashboard-btn" onclick="dashboard()">Dashboard</button>
+        </header>
+
+        <!-- Soil Status Section -->
+        <section class="soil-status">
+            <h2>🌾 Current Soil Status</h2>
+            <div class="progress-container">
+                <label>Soil Moisture:</label>
+                <progress id="soilMoisture" value="0" max="100"></progress>
+                <span id="soilMoistureValue">--%</span>
+            </div>
+            <div class="progress-container">
+                <label>Soil Nutrients:</label>
+                <progress id="soilNutrients" value="0" max="100"></progress>
+                <span id="soilNutrientsValue">--%</span>
+            </div>
+            <div class="progress-container">
+                <label>Soil pH:</label>
+                <progress id="soilPH" value="0" max="14"></progress>
+                <span id="soilPHValue">--</span>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <h2>📊 Soil Health Over Time</h2>
+            <canvas id="soilHealthChart"></canvas>
+        </section>
+
+        <!-- Sensor Data Logs -->
+        <section class="sensor-logs">
+            <h2>📋 Recent Sensor Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Soil Moisture (%)</th>
+                        <th>Soil Nutrients (%)</th>
+                        <th>Soil pH</th>
+                    </tr>
+                </thead>
+                <tbody id="sensorData">
+                    <!-- Data will be added dynamically here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Alerts Section -->
+        <section class="alerts-section">
+            <h2>🚨 Alerts</h2>
+            <ul id="alertsList">
+                <!-- Alerts will be populated here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

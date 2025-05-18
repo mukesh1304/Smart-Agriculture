@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - Smart Agriculture System</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ Header -->
+        <header class="dashboard-header">
+            <h1>🌟 System Features</h1>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+        <!-- ✅ Feature Section -->
+        <section class="feature-section">
+            <h2>🌾 Soil Monitoring</h2>
+            <p>
+                Monitor soil moisture, temperature, and pH levels in real-time to ensure optimal soil conditions 
+                for crop growth.
+            </p>
+            <a href="soil-monitoring.html" class="feature-btn">Explore Soil Monitoring</a>
+        </section>
+
+        <section class="feature-section">
+            <h2>💧 Irrigation Control</h2>
+            <p>
+                Automatically adjust irrigation schedules based on real-time weather and soil moisture data to 
+                conserve water and maintain crop health.
+            </p>
+            <a href="irrigation-control.html" class="feature-btn">Explore Irrigation Control</a>
+        </section>
+
+        <section class="feature-section">
+            <h2>🐛 Pest and Disease Detection</h2>
+            <p>
+                Detect early signs of pests and diseases using AI-based pattern recognition to prevent crop damage.
+            </p>
+            <a href="pest-disease-detection.html" class="feature-btn">Explore Pest and Disease Detection</a>
+        </section>
+
+        <section class="feature-section">
+            <h2>🌦️ Weather Monitoring</h2>
+            <p>
+                Get real-time weather updates and forecasts to plan agricultural activities effectively.
+            </p>
+            <a href="index.html#weather-section" class="feature-btn">Check Weather</a>
+        </section>
+
+        <section class="feature-section">
+            <h2>📊 Crop Health Analysis</h2>
+            <p>
+                Track crop health over time with graphical analysis and get insights to improve productivity.
+            </p>
+            <a href="index.html#chart-section" class="feature-btn">View Crop Health</a>
+        </section>
+    </div>
+
+    <script>
+        // ✅ Logout Function
+        function logout() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

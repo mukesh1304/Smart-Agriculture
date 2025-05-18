@@ -1,0 +1,78 @@
+/* ✅ Overview and Mission Section */
+.overview-section,
+.mission-section,
+.contact-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.overview-section h2,
+.mission-section h2,
+.contact-section h2 {
+    color: #4CAF50;
+}
+
+/* ✅ Team Section */
+.team-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    background-color: #f4f4f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 180px;
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.team-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ✅ Contact Section */
+.contact-section a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}

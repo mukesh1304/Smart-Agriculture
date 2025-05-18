@@ -1,0 +1,86 @@
+/* ✅ Upload Section */
+.upload-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dashboard-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    margin-left: auto;
+}
+
+.dashboard-btn:hover {
+    background-color: #d32f2f;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ✅ Preview Image */
+#imagePreview img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* ✅ Result Section */
+.result-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#resultMessage {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#suggestions {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ✅ Buttons */
+.nav-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-btn:hover {
+    background-color: #388e3c;
+}

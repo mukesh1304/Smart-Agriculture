@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Agriculture Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- ✅ Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>🚜 Smart Agriculture System Dashboard</h1>
+                <div>
+                    <button class="logo
+                    ut-btn" onclick="logout()">Logout</button>
+                    <button class="soil-btn" onclick="soil()">Soil Monitoring</button>
+                    <button class="irrigation-btn" onclick="irrigation()">Irrigation Control</button>
+                    <!-- <button class="pest-btn" onclick="pest()">Pest and Disease Detection </button> -->
+                </div>
+            </div>
+        </header>
+
+        <!-- ✅ Weather Section -->
+        <section class="weather-section">
+            <h2>🌦️ Current Weather</h2>
+            <div class="weather-info">
+                <p>Temperature: <span id="temperature">--</span> °C</p>
+                <p>Humidity: <span id="humidity">--</span> %</p>
+                <p>Conditions: <span id="conditions">--</span></p>
+                <button onclick="getCurrentLocation()">Use Current Location</button>
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- ✅ Soil and Crop Section -->
+        <section class="crop-section">
+            <h2>🌾 Soil and Crop Health</h2>
+            <div class="progress-container">
+                <label for="soilMoisture">Soil Moisture:</label>
+                <progress id="soilMoisture" value="0" max="100"></progress>
+                <span id="soilMoistureValue">--%</span>
+            </div>
+            <div class="progress-container">
+                <label for="cropHealth">Crop Health:</label>
+                <progress id="cropHealth" value="0" max="100"></progress>
+                <span id="cropHealthValue">--%</span>
+            </div>
+        </section>
+
+        <!-- ✅ Select Crop Section -->
+        <section class="select-crop-section">
+            <h2>🌱 Select a Crop to View Farming Process</h2>
+            <select id="cropSelect">
+                <option value=""disabled selected>Select Crop</option>
+                <option value="Crop/wheat_process.html">Wheat</option>
+                <option value="Crop/rice_process.html">Rice</option>
+                <option value="Crop/corn_process.html">Corn</option>
+                <option value="Crop/tomato_process.html">Tomato</option>
+            </select>
+            <button onclick="goToProcess()">View Process</button>
+        </section>
+
+        
+
+        <!-- ✅ Sensor Data Logs -->
+        <section class="sensor-logs">
+            <h2>📋 Recent Sensor Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Temperature (°C)</th>
+                        <th>Humidity (%)</th>
+                        <th>Soil Moisture (%)</th>
+                        <th>Conditions</th>
+                    </tr>
+                </thead>
+                <tbody id="sensorData">
+                    <!-- Data will be added dynamically here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ✅ Map Section -->
+        <section class="map-section">
+            <h2>🗺️ Farm Location</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- ✅ Crop Health Chart -->
+        <section class="chart-section">
+            <h2>📊 Crop Health Over Time</h2>
+            <div class="chart-container">
+                <canvas id="cropHealthChart"></canvas>
+            </div>
+        </section>
+
+        <!-- ✅ Alerts and Notifications -->
+        <section class="alerts-section">
+            <h2>🚨 Alerts</h2>
+            <ul id="alertsList">
+                <!-- Alerts will be populated here -->
+            </ul>
+        </section>
+
+        <!-- ✅ Upcoming Tasks -->
+        <section class="tasks-section">
+            <h2>📅 Upcoming Tasks</h2>
+            <ul id="tasksList">
+                <li>Watering - Tomorrow at 6:00 AM</li>
+                <li>Fertilization - 3 days from now</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- ✅ JS Scripts -->
+    <script>
+        function viewCropProcess() {
+            const crop = document.getElementById('cropSelect').value;
+            if (crop) {
+                window.location.href = crop + "_process.html"; // e.g., wheat_process.html
+            } else {
+                alert("Please select a crop.");
+            }
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
